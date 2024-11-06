@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/bg.jpg'); /* เปลี่ยนเป็นพาธของรูปพื้นหลัง */
+    background-size: cover; /* ปรับขนาดพื้นหลังให้เต็มพื้นที่ */
+    background-position: center; /* จัดตำแหน่งพื้นหลังให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพพื้นหลังซ้ำ */
+    background-attachment: fixed; /* ทำให้ภาพพื้นหลังอยู่คงที่เมื่อเลื่อน */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    color: white;
+}
+
+#form-container {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    width: calc(50% - 22px);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #C42031;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8B183D;
+}
+
+#floating-container {
+    position: relative;
+    margin-top: 200px;
+}
+
+#floating-kra-thong {
+    width: 300px; /* ปรับขนาดกราฟิกกระทงตามต้องการ */
+    animation: float 3s ease-in-out infinite; /* เริ่มต้นอนิเมชัน */
+}
+
+#message {
+    font-size: 20px;
+    margin-top: -450px; /* ปรับตำแหน่งข้อความขึ้นไปด้านบนกระทง */
+    animation: float 3s ease-in-out infinite; /* เพิ่มอนิเมชันให้ข้อความ */
+    position: absolute; /* ทำให้ข้อความอยู่ในตำแหน่งที่ต้องการ */
+    left: 45%; /* จัดตำแหน่งให้กลางกระทง */
+    transform: translateX(-50%); /* ให้ข้อความอยู่ตรงกลาง */
+    color: #ffffff; /* ปรับสีข้อความตามที่ต้องการ */
+}
+
+
+/* อนิเมชันลอยน้ำ */
+@keyframes float {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-20px); /* ปรับค่าตามที่ต้องการ */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
